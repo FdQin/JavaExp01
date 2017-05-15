@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+	http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<context-param>
+		<param-name>driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:mysql://localhost:3306/hibernate</param-value>
+	</context-param>
+	<context-param>
+		<param-name>user</param-name>
+		<param-value>root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pass</param-name>
+		<param-value>qw134679</param-value>
+	</context-param>
+
+
+	<servlet>
+		<!-- 鎸囬敓鏂ゆ嫹Servlet閿熸枻鎷烽敓鏂ゆ嫹 -->
+		<servlet-name>config</servlet-name>
+		<!-- 鎸囬敓鏂ゆ嫹閿熸枻鎷烽敓渚ラ潻鎷稪SP椤甸敓鏂ゆ嫹閿熸枻鎷烽敓鐭鎷稴ervlet -->
+		<jsp-file>/configTest2.jsp</jsp-file>
+		<!-- 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷蜂负name閿熶茎璇ф嫹閿熸枻鎷烽敓鏂ゆ嫹鍊间负crazyit.org -->
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>crazyit.org</param-value>
+		</init-param>
+		<!-- 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷蜂负age閿熶茎璇ф嫹閿熸枻鎷烽敓鏂ゆ嫹鍊间负30 -->
+		<init-param>
+			<param-name>age</param-name>
+			<param-value>30</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<!-- 鎸囬敓鏂ゆ嫹閿熸枻鎷穋onfig Servlet閿熸枻鎷烽敓鐭鎷�/config URL-->
+		<servlet-name>config</servlet-name>
+		<url-pattern>/config</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
